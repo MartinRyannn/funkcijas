@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>martins ir labakais</title>
+    <title>Vidējā vērtība un lielākais skaitlis</title>
 </head>
 <body>
-    
+    <p id="vidVertiba">Vidējā vērtība: </p>
+    <p id="lielakaisSkaitlis">Lielākais skaitlis: </p>
+
+    <script>
+        function videjais(x, y) {
+          return (x + y) / 2;
+        }
+
+        function lielakais(x, y) {
+          if (x > y) {
+            return x;
+          } else {
+            return y;
+          }
+        }
+
+        var skaitlis1 = 10;
+        var skaitlis2 = 5;
+
+        var videjaVertiba = videjais(skaitlis1, skaitlis2);
+        var lielakaisSkaitlis = lielakais(skaitlis1, skaitlis2);
+
+        var vidVertibaElement = document.getElementById("vidVertiba");
+        var lielakaisSkaitlisElement = document.getElementById("lielakaisSkaitlis");
+
+        vidVertibaElement.textContent += videjaVertiba;
+        lielakaisSkaitlisElement.textContent += lielakaisSkaitlis;
+    </script>
 </body>
-<script></script>
 </html>
